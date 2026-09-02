@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+  /* Smooth scrolling is handled by Lenis (see SmoothScroll.tsx) — native
+     `scroll-behavior: smooth` is intentionally omitted to avoid the two
+     scroll mechanisms fighting each other on anchor navigation. */
 
   body {
     @apply bg-white text-navy-900 antialiased;

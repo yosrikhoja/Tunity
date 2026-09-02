@@ -3,6 +3,8 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
+import ScrollProgress from "@/components/ScrollProgress";
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 
 const inter = Inter({
@@ -43,6 +45,8 @@ export default function RootLayout({
     <html lang="fr" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="flex min-h-screen flex-col font-sans">
         <LanguageProvider>
+          <SmoothScroll />
+          <ScrollProgress />
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />

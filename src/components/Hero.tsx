@@ -6,7 +6,21 @@ import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, CheckCircle2, Leaf, Target } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
+const MotionLink = motion.create(Link);
+
 const trustIcons = [ShieldCheck, CheckCircle2, Leaf, Target];
+
+const trustContainer = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.1, delayChildren: 0.1 },
+  },
+};
+
+const trustItem = {
+  hidden: { opacity: 0, y: 16 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+};
 
 export default function Hero() {
   const { dict } = useLanguage();
@@ -50,34 +64,45 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Link
+            <MotionLink
               href="/expertises"
+              whileHover={{ scale: 1.035 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
               className="inline-flex items-center gap-2 rounded-lg bg-navy-900 px-6 py-3 text-xs font-semibold uppercase tracking-wide text-white shadow-card transition-colors duration-200 hover:bg-navy-800 sm:text-sm"
             >
               {dict.hero.ctaPrimary}
               <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
+            </MotionLink>
+            <MotionLink
               href="/contact"
+              whileHover={{ scale: 1.035 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
               className="inline-flex items-center gap-2 rounded-lg border border-navy-200 bg-white px-6 py-3 text-xs font-semibold uppercase tracking-wide text-navy-900 transition-colors duration-200 hover:border-navy-400 sm:text-sm"
             >
               {dict.hero.ctaSecondary}
-            </Link>
+            </MotionLink>
           </div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="show"
           viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.6, delay: 0.15 }}
+          variants={trustContainer}
           className="relative z-10 mt-4 rounded-2xl border border-navy-100 bg-white p-6 shadow-card-hover lg:mt-8 lg:p-8"
         >
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:divide-x lg:divide-navy-100">
             {dict.hero.trust.map((item, i) => {
               const Icon = trustIcons[i];
               return (
-                <div key={item.title} className="flex items-start gap-3 lg:px-6 lg:first:pl-0">
+                <motion.div
+                  key={item.title}
+                  variants={trustItem}
+                  whileHover={{ y: -3 }}
+                  className="flex items-start gap-3 lg:px-6 lg:first:pl-0"
+                >
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-electric-50 text-electric-600">
                     <Icon className="h-5 w-5" strokeWidth={2} />
                   </span>
@@ -89,7 +114,7 @@ export default function Hero() {
                       {item.description}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

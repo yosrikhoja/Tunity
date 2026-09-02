@@ -5,6 +5,7 @@ import PageHeader from "@/components/sections/PageHeader";
 import SectionTitle from "@/components/SectionTitle";
 import CTASection from "@/components/sections/CTASection";
 import HeroGraphic from "@/components/graphics/HeroGraphic";
+import AnimatedNumber from "@/components/AnimatedNumber";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const valueIcons = [ShieldCheck, Layers, Sparkles, Users2];
@@ -77,9 +78,13 @@ export default function AboutContent() {
 
       <section className="bg-navy-gradient py-20 text-white lg:py-24">
         <div className="container-tunity grid grid-cols-2 gap-8 sm:grid-cols-4">
-          {a.stats.map(([stat, label]) => (
+          {a.stats.map(([stat, label], i) => (
             <div key={label} className="text-center">
-              <p className="font-display text-3xl font-bold sm:text-4xl">{stat}</p>
+              {i === 0 ? (
+                <p className="font-display text-3xl font-bold sm:text-4xl">{stat}</p>
+              ) : (
+                <AnimatedNumber value={stat} className="block font-display text-3xl font-bold sm:text-4xl" />
+              )}
               <p className="mt-2 text-sm text-navy-300">{label}</p>
             </div>
           ))}

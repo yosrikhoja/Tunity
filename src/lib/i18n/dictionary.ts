@@ -94,6 +94,18 @@ const fr = {
       },
     ],
   },
+  partnersShowcase: {
+    eyebrow: "Nos partenaires",
+    title: "Ils nous font confiance",
+    description:
+      "Nous collaborons avec des partenaires reconnus pour leur expertise et leur engagement en faveur de la qualité, de l'innovation et de la réussite de vos projets.",
+    projectsLabel: "Projets réalisés",
+    visitSite: "Visiter le site",
+    networkTitle: "Un réseau d'experts à vos côtés",
+    networkDescription:
+      "Nous concevons des solutions durables, innovantes et performantes pour accompagner vos ambitions et relever vos défis techniques.",
+    networkCta: "Découvrir nos projets",
+  },
   home: {
     expertisesEyebrow: "Nos expertises",
     expertisesTitle: "Six disciplines. Une équipe intégrée.",
@@ -439,6 +451,18 @@ const en: typeof fr = {
         description: "Custom solutions built around your goals.",
       },
     ],
+  },
+  partnersShowcase: {
+    eyebrow: "Our Partners",
+    title: "They Trust Us",
+    description:
+      "We work alongside recognized partners for their expertise and their commitment to quality, innovation and the success of your projects.",
+    projectsLabel: "Completed Projects",
+    visitSite: "Visit Website",
+    networkTitle: "A network of experts by your side",
+    networkDescription:
+      "We design sustainable, innovative and high-performance solutions to support your ambitions and tackle your technical challenges.",
+    networkCta: "Discover Our Projects",
   },
   home: {
     expertisesEyebrow: "Our Expertises",

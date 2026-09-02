@@ -7,6 +7,7 @@ import SectionTitle from "@/components/SectionTitle";
 import ExpertiseCard from "@/components/ExpertiseCard";
 import ProjectCard from "@/components/ProjectCard";
 import AboutTeaserSection from "@/components/sections/AboutTeaserSection";
+import PartnersShowcaseSection from "@/components/sections/PartnersShowcaseSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import PartnersSection from "@/components/sections/PartnersSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
@@ -22,6 +23,7 @@ export default function HomePage() {
     <>
       <Hero />
       <AboutTeaserSection />
+      <PartnersShowcaseSection />
 
       <section className="py-20 lg:py-24">
         <div className="container-tunity">
