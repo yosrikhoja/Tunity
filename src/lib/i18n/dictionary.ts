@@ -104,7 +104,7 @@ const fr = {
     networkTitle: "Un réseau d'experts à vos côtés",
     networkDescription:
       "Nous concevons des solutions durables, innovantes et performantes pour accompagner vos ambitions et relever vos défis techniques.",
-    networkCta: "Découvrir nos projets",
+    networkCta: "Nous contacter",
   },
   home: {
     expertisesEyebrow: "Nos expertises",
@@ -112,11 +112,6 @@ const fr = {
     expertisesDescription:
       "De la première esquisse structurelle à un flux de travail entièrement numérisé, nous gardons chaque discipline connectée sous un même toit.",
     viewAllExpertises: "Voir toutes les expertises",
-    projectsEyebrow: "Réalisations phares",
-    projectsTitle: "Des projets dans tous les secteurs et échelles",
-    projectsDescription:
-      "Une sélection de projets structurels, BIM, architecturaux et numériques livrés pour des promoteurs, agences et clients industriels.",
-    viewAllProjects: "Voir tous les projets",
   },
   process: {
     eyebrow: "Notre méthode",
@@ -248,16 +243,6 @@ const fr = {
     description:
       "Chaque expertise fait partie d'une équipe connectée — les décisions structurelles informent l'architecture, le BIM garde tout le monde aligné, et les outils numériques relient l'ensemble.",
   },
-  projectsPage: {
-    eyebrow: "Nos projets",
-    title: "Des réalisations dans tous les secteurs, échelles et disciplines",
-    description:
-      "De la conception structurelle de tours en hauteur aux déploiements de jumeaux numériques, découvrez une sélection de projets livrés par notre équipe intégrée.",
-    filterAll: "Tous",
-    noResults: "Aucun projet trouvé dans cette catégorie pour le moment.",
-    ctaTitle: "Un projet en tête ?",
-    ctaDescription: "Voyons ensemble comment notre équipe pluridisciplinaire peut le concrétiser.",
-  },
   careersPage: {
     eyebrow: "Carrières chez TUNITY",
     title: "Construisez votre carrière entre ingénierie et numérique",
@@ -353,7 +338,6 @@ const fr = {
   },
   common: {
     learnMore: "En savoir plus",
-    viewCaseStudy: "Voir l'étude de cas",
     applyNow: "Postuler",
   },
 };
@@ -462,7 +446,7 @@ const en: typeof fr = {
     networkTitle: "A network of experts by your side",
     networkDescription:
       "We design sustainable, innovative and high-performance solutions to support your ambitions and tackle your technical challenges.",
-    networkCta: "Discover Our Projects",
+    networkCta: "Contact Us",
   },
   home: {
     expertisesEyebrow: "Our Expertises",
@@ -470,11 +454,6 @@ const en: typeof fr = {
     expertisesDescription:
       "From the first structural sketch to a fully digitized workflow, we keep every discipline connected under one roof.",
     viewAllExpertises: "View all expertises",
-    projectsEyebrow: "Featured Work",
-    projectsTitle: "Projects across sectors and scales",
-    projectsDescription:
-      "A selection of structural, BIM, architectural and digital projects delivered for developers, agencies and industrial clients.",
-    viewAllProjects: "View all projects",
   },
   process: {
     eyebrow: "How We Work",
@@ -600,16 +579,6 @@ const en: typeof fr = {
     description:
       "Each expertise operates as part of a connected team — so structural decisions inform architecture, BIM keeps everyone aligned, and digital tools tie it all together.",
   },
-  projectsPage: {
-    eyebrow: "Our Projects",
-    title: "Work across sectors, scales and disciplines",
-    description:
-      "From high-rise structural design to digital twin rollouts, explore a selection of projects delivered by our integrated team.",
-    filterAll: "All",
-    noResults: "No projects found in this category yet.",
-    ctaTitle: "Have a project in mind?",
-    ctaDescription: "Let's discuss how our multidisciplinary team can bring it to life.",
-  },
   careersPage: {
     eyebrow: "Careers at TUNITY",
     title: "Build your career across engineering and digital",
@@ -704,7 +673,6 @@ const en: typeof fr = {
   },
   common: {
     learnMore: "Learn more",
-    viewCaseStudy: "View case study",
     applyNow: "Apply Now",
   },
 };

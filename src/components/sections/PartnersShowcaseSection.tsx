@@ -41,7 +41,7 @@ export default function PartnersShowcaseSection() {
               <p className="mt-1 text-sm leading-relaxed text-navy-600">{t.networkDescription}</p>
             </div>
           </div>
-          <Link href="/projects" className="btn-primary shrink-0">
+          <Link href="/contact" className="btn-primary shrink-0">
             {t.networkCta}
             <ArrowRight className="h-4 w-4" />
           </Link>

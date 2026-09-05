@@ -2,18 +2,35 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
 import { navLinks } from "@/data/nav";
 import { expertises } from "@/data/expertises";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+
+const columnContainer = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.1 } },
+};
+
+const column = {
+  hidden: { opacity: 0, y: 16 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 export default function Footer() {
   const { locale, dict } = useLanguage();
 
   return (
     <footer className="border-t border-navy-100 bg-navy-950 text-navy-100">
-      <div className="container-tunity grid gap-12 py-16 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
-        <div>
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-60px" }}
+        variants={columnContainer}
+        className="container-tunity grid gap-12 py-16 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]"
+      >
+        <motion.div variants={column}>
           <Link href="/" className="inline-flex items-center rounded-xl bg-white px-3 py-2 shadow-card">
             <Image
               src="/logo.png"
@@ -41,9 +58,9 @@ export default function Footer() {
               <Twitter className="h-4 w-4" />
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={column}>
           <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-white">
             {dict.footer.navigate}
           </h4>
@@ -61,9 +78,9 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={column}>
           <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-white">
             {dict.footer.expertises}
           </h4>
@@ -76,9 +93,9 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={column}>
           <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-white">
             {dict.footer.contact}
           </h4>
@@ -96,8 +113,8 @@ export default function Footer() {
               <span>contact@tunity-eng.com</span>
             </li>
           </ul>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <div className="border-t border-white/10">
         <div className="container-tunity flex flex-col items-center justify-between gap-3 py-6 text-xs text-navy-400 sm:flex-row">
